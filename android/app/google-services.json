@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "651648442319",
+    "project_id": "baseline-44216",
+    "storage_bucket": "baseline-44216.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651648442319:android:de824959cdab41722cbcba",
+        "android_client_info": {
+          "package_name": "app.baselinecovalnet.appscenter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651648442319-r3c1k6r6pdcjjtt6a7j1u89jakjiq6ir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi6Pr66a8VB07wE85TLBmtq04F9lGE0Ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651648442319-r3c1k6r6pdcjjtt6a7j1u89jakjiq6ir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

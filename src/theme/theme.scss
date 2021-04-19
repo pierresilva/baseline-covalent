@@ -1,0 +1,154 @@
+/*
+ * Global application theme.
+ * Framework overrides and customization goes here.
+ */
+
+@import "~@angular/material/theming";
+@import "~@covalent/core/theming/all-theme";
+
+// (optional) Additional themes
+@import "~@covalent/markdown/markdown-theme";
+@import "~@covalent/highlight/highlight-theme";
+
+// Define a custom typography config that overrides the font-family
+// or any typography level.
+$typography: mat-typography-config(
+  $font-family: "Roboto, monospace",
+  $headline: mat-typography-level(32px, 48px, 700),
+);
+
+@include mat-core($typography); // $typography is an **optional** argument for the mat-core
+
+$primary: mat-palette($mat-orange, 800, 100, 900);
+$accent: mat-palette($mat-light-blue, 600, 100, 900);
+
+$warn: mat-palette($mat-red, 600, 100, 900);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+@include covalent-theme($theme, $typography); // $typography is an **optional** argument for the covalent-theme
+
+// Include the core styles for Covalent
+@include covalent-core();
+// Include pre-bundled material-icons
+$mat-font-url: "./";
+@include covalent-material-icons();
+// Include covalent utility classes
+@include covalent-utilities();
+// Include flex layout classes
+@include covalent-layout();
+// Include covalent color classes
+@include covalent-colors();
+// (optional) Additional themes
+@include covalent-markdown-theme($theme);
+@include covalent-highlight-theme();
+
+// Dark theme
+.theme-dark {
+  $primary-dark: mat-palette($mat-blue-grey, 900);
+  $accent-dark: mat-palette($mat-deep-orange, A400);
+  $warn-dark: mat-palette($mat-red, 600);
+  $theme-dark: mat-dark-theme($primary-dark, $accent-dark, $warn-dark);
+  @include angular-material-theme($theme-dark);
+  @include covalent-theme($theme-dark, $typography);
+
+  .tc-primary {
+    color: mat-color($primary-dark);
+  }
+
+  .tc-accent,
+  a {
+    color: mat-color($accent-dark);
+  }
+
+  a:hover {
+    color: darken(mat-color($accent-dark), 10%);
+  }
+
+  .tc-warn {
+    color: mat-color($warn-dark);
+  }
+
+  // NGX Charts
+  [ngx-charts-axis-label] text,
+  .tick text {
+    fill: rgba(white, 0.5);
+  }
+
+  .gridline-path {
+    &.gridline-path-horizontal,
+    &.gridline-path-vertical {
+      stroke: rgba(white, 0.06);
+    }
+  }
+
+  .legend-title-text {
+    color: rgba(white, 0.5);
+  }
+}
+
+// stylelint-disable-next-line selector-max-universal
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+}
+
+:host {
+  width: 100%;
+}
+
+::ng-deep {
+  // Adjust your logo position
+  .mat-icon {
+    &.mat-icon-logo {
+      width: 100px;
+      position: relative;
+      top: 0px;
+    }
+  }
+
+  // Hack for small search box
+  .td-search-box {
+    .td-search-icon.mat-icon-button {
+      margin: 0;
+      height: 30px;
+
+      .mat-icon {
+        margin-top: -10px;
+      }
+    }
+
+    td-search-input {
+      margin-left: 0 !important;
+      margin-bottom: 5px;
+
+      .mat-form-field {
+        width: auto;
+      }
+
+      .mat-form-field-wrapper {
+        padding-bottom: 0;
+      }
+
+      .mat-input-infix {
+        padding: 0;
+      }
+
+      .mat-form-field-infix {
+        border-top: 0;
+      }
+    }
+  }
+
+  .mat-sidenav-container {
+    height: 100%;
+  }
+}

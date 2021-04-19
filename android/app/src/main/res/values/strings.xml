@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BaseLine</string>
+    <string name="title_activity_main">BaseLine</string>
+    <string name="package_name">app.baselinecovalnet.appscenter</string>
+    <string name="custom_url_scheme">app.baselinecovalnet.appscenter</string>
+</resources>

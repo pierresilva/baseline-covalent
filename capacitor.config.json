@@ -1,0 +1,13 @@
+{
+  "appId": "app.baselinecovalnet.appscenter",
+  "appName": "BaseLine",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

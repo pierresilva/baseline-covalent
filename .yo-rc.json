@@ -1,0 +1,29 @@
+{
+  "generator-ngx-rocket": {
+    "version": "9.2.0",
+    "props": {
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "appName": "baseline covalent",
+      "target": ["web"],
+      "pwa": true,
+      "ui": "material",
+      "layout": "simple",
+      "auth": false,
+      "lazy": false,
+      "angulartics": false,
+      "languages": ["en-US", "es-ES"],
+      "tools": ["prettier", "hads", "compodoc", "jest", "puppeteer"],
+      "utility": ["lodash", "ramda", "moment", "datefns"],
+      "deploy": "none",
+      "projectName": "baseline-covalent",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": []
+    }
+  }
+}
